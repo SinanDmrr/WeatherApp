@@ -1,0 +1,91 @@
+﻿<Window x:Class="WeatherApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeatherApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="512" Width="1024" ResizeMode="NoResize">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20">
+
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition>
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="20">
+
+            </ColumnDefinition>
+            <ColumnDefinition >
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="20">
+
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20">
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+            <RowDefinition Height="20">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <Grid.Background>
+            <ImageBrush x:Name="backgroundImage" ImageSource="/WeatherApp;component/Images/sun.png">
+
+            </ImageBrush>
+        </Grid.Background>
+
+        <Label x:Name="labelTemperature" Grid.Column="1" Grid.Row="2" Content="36°C" HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="120" FontFamily="Agency FB" FontWeight="Bold" Foreground="White">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="7" BlurRadius="7"/>
+            </Label.Effect>
+        </Label>
+
+        <Label x:Name="labelInfo_weather" Grid.Column="1" Grid.Row="3" Content="Info" FontSize="50" FontFamily="Castellar" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" Padding="-5">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="6" BlurRadius="3" />
+            </Label.Effect>
+        </Label>
+
+        <Label x:Name="labelInfo_min" Grid.Column="1" Grid.Row="2" Content="min:" FontSize="30" FontFamily="Castellar" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" Margin="0,152,0,0" Grid.RowSpan="2">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" BlurRadius="2" />
+            </Label.Effect>
+        </Label>
+        
+        <Label x:Name="labelInfo_max" Grid.Column="1" Grid.Row="2" Content="max:" FontSize="30" FontFamily="Castellar" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontWeight="Bold"  Grid.RowSpan="2">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="3" BlurRadius="2" />
+            </Label.Effect>
+        </Label>
+
+        <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Margin="30,0,60,0" BorderBrush="#FF949494" CornerRadius="25" Background="White" Height="50" VerticalAlignment="Top" BorderThickness="5,5,5,5">
+            <TextBox x:Name="txtBoxCity" Text="Stadt für die Temperatursuche angeben" Margin="30,0,30,0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Times New Roman"/>
+        </Border>
+        
+        
+        
+
+
+    </Grid>
+</Window>
