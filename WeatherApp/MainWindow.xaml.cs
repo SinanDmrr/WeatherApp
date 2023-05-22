@@ -53,23 +53,23 @@ namespace WeatherApp
         public void UpdateUI(string city)
         {
             WeatherMapResponse result = GetWeatherData(city);
-            string finalImage = "sun";
+            string finalImage = "Sun.png";
 
             if (result.weather[0].main.Contains("Clouds"))
             {
-                finalImage = "cloud.png";
+                finalImage = "Cloud.png";
             }
             else if (result.weather[0].main.Contains("Snow"))
             {
-                finalImage = "sun.png";
+                finalImage = "Sun.png";
             }
             else if (result.weather[0].main.Contains("Rain"))
             {
-                finalImage = "rain.png";
+                finalImage = "Rain.png";
             }
             else if (result.weather[0].main.Contains("Clear"))
             {
-                finalImage = "sun.png";
+                finalImage = "Sun.png";
             }
 
             backgroundImage.ImageSource = new BitmapImage(new Uri("Images/" + finalImage, UriKind.Relative));
