@@ -61,7 +61,7 @@ namespace WeatherApp
             }
             else if (result.weather[0].main.Contains("Snow"))
             {
-                finalImage = "Sun.png";
+                finalImage = "Snow.png";
             }
             else if (result.weather[0].main.Contains("Rain"))
             {
