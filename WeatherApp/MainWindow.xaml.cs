@@ -22,7 +22,7 @@ namespace WeatherApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly string apiKey = "a96c831bea8df6d395eaf8c9afd8e76f";
+        private readonly string apiKey = "HIER EUREN API SCHLÜSSEL VON DER SEITE OPENWEATHERMAP EINGEBEN";
         // Link aus Website -> https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key} -> Beispiel:  ?q=Berlin&appid=a96c831bea8df6d395eaf8c9afd8e76f
         private readonly string requestUrl = @"https://api.openweathermap.org/data/2.5/weather";  // Alles ab dem ? wird gelöscht da man das später eh mit den passenden Werten befüllen muss
         string cityName = "Troisdorf";
